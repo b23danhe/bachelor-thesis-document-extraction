@@ -1,0 +1,9 @@
+docling
+requests
+jsonschema
+openai
+azure-ai-documentintelligence
+anthropic
+pymupdf
+google-cloud-documentai
+google-api-core
