@@ -1,12 +1,14 @@
-# no-docker-docling-extractor
-This version runs without **Docker**
+# Document extraction pipeline
+Following is the installation instructions for the extraction pipeline that was used during the information teknology thesis project in spring 2026.
 
 ## Requirements
 - Python 3.11+ (recommended: 3.12 or 3.13)
 - macOS / Linux / Windows
 - OpenAI API key (for cloud pipeline)
+- Anthropic API key (for Sonnet 4.6)
 - Ollama (for local LLM pipeline)
 - Azure documentIntelligence (for Azure pipeline)
+- Google Documents (for Google pipeline)
 - Optional:
     - Only set up the pipeline you whant to run
 
@@ -30,7 +32,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 4. ### Create .env file
-Create a file named `.env`in project root:
+Create a file named `.env`in project root with the following environmet variables:
 
     OLLAMA_URL=http://127.0.0.1:11434
     OLLAMA_MODEL=qwen3:8b
@@ -75,6 +77,7 @@ Options for pipelinename:
 - openai
 - claude
 - azure
+- google
  
 *(Filename should be a .pdf, .jpg or .png)* 
 <br>Example: test.png
