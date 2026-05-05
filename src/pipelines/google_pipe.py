@@ -162,22 +162,3 @@ def run(file_path_str: str, dataset: str, validation_folder_path: Path, csv_writ
             validation_file_path=None,
         )
     )
-
-
-  
-if __name__ == "__main__":
-
-    from dotenv import load_dotenv
-    #Something odd when i tried to import the files, somethingt to look into
-    load_dotenv(r"C:\Users\Carl\Desktop\exjobb\Ex-jobb-2026\.env") 
-    result = run(
-        file_path=r"C:\Users\Carl\Desktop\exjobb\Ex-jobb-2026\cord_v2\test\cord_test_24.jpg",
-        dataset="cord",
-        #validation_folder_path=Path("some/path"),
-        #csv_writer=None,
-        #output_dir=Path("some/output"),
-    )
-    from pathlib import Path
-    Finalresult = validateCordExtract(result, Path(r"C:\Users\Carl\Desktop\exjobb\Ex-jobb-2026\cord_v2\test"), 
-                            Path(r"C:\Users\Carl\Desktop\exjobb\Ex-jobb-2026\cord_v2\test\cord_test_24.jpg"))
-    print("CORD RESULT:  ", Finalresult)

@@ -13,14 +13,14 @@ class Settings:
     ollama_model: str
     ollama_ocr_model: str
 
-    #Azure settings
+    # Azure settings
     azure_endpoint: str
     azure_key: str
     azure_model_id_mio: str
     azure_model_id_fatura: str
     azure_model_id_cord: str
 
-    #Goolge settings
+    # Google settings
     google_api: str
 
     # OpenAI settings

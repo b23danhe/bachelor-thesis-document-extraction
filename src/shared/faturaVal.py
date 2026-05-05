@@ -32,7 +32,7 @@ class FaturaValidator:
         self.validateItems()
         
 
-    #Should be a float, But if its not, lets not crash
+    # Should be a float, But if its not, lets not crash
     def toFloat(self, value):
         try:
             return float(re.sub(r'[^\d.-]', '', str(value)))  # also strips currency symbols

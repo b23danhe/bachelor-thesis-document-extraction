@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from pathlib import Path
-from datetime import datetime
 
 from ..shared.normalize import canonicalize_json
 from ..shared.io import save_to_validation_file

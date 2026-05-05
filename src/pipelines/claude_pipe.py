@@ -10,7 +10,6 @@ from ..shared.normalize import canonicalize_json
 from ..shared.validate import Validator
 from ..shared.faturaVal import FaturaValidator
 from ..shared.cordVal import validateCordExtract
-#from ..shared.validator import get_validator
 
 from ..shared.io import save_raw_json, save_final_json, save_validation_score
 from ..shared.config import get_settings

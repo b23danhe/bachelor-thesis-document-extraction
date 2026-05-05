@@ -8,7 +8,6 @@ from ..shared.normalize import canonicalize_json
 from ..shared.validate import Validator
 from ..shared.faturaVal import FaturaValidator
 from ..shared.cordVal import validateCordExtract
-#from ..shared.validator import get_validator
 
 from ..shared.io import save_raw_json, save_final_json, save_validation_score
 from ..shared.saveToCSV import SaveToCSV
@@ -168,23 +167,3 @@ def run(file_path_str: str, dataset: str, validation_folder_path: Path, csv_writ
             validation_file_path=None,
         )
     )
-
-if __name__ == "__main__":
-    from dotenv import load_dotenv
-    load_dotenv(r"C:\Users\Carl\Desktop\exjobb\Ex-jobb-2026\.env")
-    
-    from ..providers.azure_provider import call_azure  # already imported above
-    from ..shared.config import get_settings
-
-    settings = get_settings()
-    
-    file_path = r"C:\Users\Carl\Desktop\exjobb\Ex-jobb-2026\PDFs\cord_test_1.jpg"
-    
-    result = call_azure(file_path, settings)
-    doc = result.documents[0] if getattr(result, "documents", None) else None
-    
-    # Test whichever dataset you want
-    final_data = _cord(doc)
-    
-    import json
-    print(json.dumps(final_data, indent=2))
