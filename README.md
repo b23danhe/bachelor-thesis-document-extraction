@@ -101,6 +101,28 @@ python -m src.sli foldername/filename --pipeline ollama --extractor toolname
 python -m src.cli foldername --pipeline pipelinename
 ```
 ---    
+## Running options
+Append all validations score for all runs in a single CSV-file
+``` bash
+--csv-mode experiment
+```
+Write validation score in a separate file/run (default)
+``` bash
+--csv-mode run
+```
+Decide how many runs on each dataset (default is 1)
+<br>
+Example:
+``` bash
+--runs 10
+```
+
+## Example
+``` bash
+python -m src.cli cord --pipeline ollama --extractor docling --csv-mode experiment --runs 10
+```
+This will run the cord dataset with ollama pipeline using docling as the preprocessor across 10 runs. All validation scores will be written into one single file.
+
 # Output
 Results are stored in:
 
