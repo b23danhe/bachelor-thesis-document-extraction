@@ -36,7 +36,7 @@ Create a file named `.env`in project root with the following environmet variable
 
     OLLAMA_URL=http://127.0.0.1:11434
     OLLAMA_MODEL=qwen3:8b
-    OLLAMA_OCR_MODEL=glm-ocr:latest
+    OLLAMA_OCR_MODEL=glm-ocr:bf16
 
     AZURE_ENDPOINT=link_to_azure_endpoint
     AZURE_KEY= your_api_key
@@ -44,11 +44,13 @@ Create a file named `.env`in project root with the following environmet variable
     AZURE_MODEL_ID_FATURA=model_id
     AZURE_MODEL_ID_MIO=model_id
 
+    GOOGLE_APPLICATION_CREDENTIALS= path to google credential JSON-file
+
     OPENAI_API_KEY= your_api_key
     OPENAI_MODEL=gpt-5.2
 
     CLAUDE_API_KEY= your_api_key
-    CLAUDE_MODEL=sonnet-4.6
+    CLAUDE_MODEL=claude-sonnet-4-6
 
     OUTPUT_DIR=./output
     HF_HOME=./hf_cache
@@ -59,7 +61,7 @@ Create three folders in the root-folder and name them:
     fatura
     cord
 
-This is where you place the folder with the dataset or files to be extracted.
+This is where you place the files in the corresponding dataset
 
 Also place the JSON-file containing the "ground truth" for each dataset in the respective folder. Name the file with the same name as the folder it's in (e.g mio/mio.json).
 
@@ -106,7 +108,7 @@ Append all validations score for all runs in a single CSV-file
 ``` bash
 --csv-mode experiment
 ```
-Write validation score in a separate file/run (default)
+Write validation score in a separate CSV-file/run (default)
 ``` bash
 --csv-mode run
 ```
